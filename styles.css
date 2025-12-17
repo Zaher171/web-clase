@@ -1,0 +1,219 @@
+/* ==========================
+   RESET / NORMALIZACIÓN
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+:root {
+  --bg: #fbfbfd;
+  --text: #1d1d1f;
+  --accent: #0066cc;
+  --border: #d2d2d7;
+  --soft: #f5f5f7;
+  --radius: 14px;
+  --max-width: 1200px;
+  --font: 'Inter', sans-serif;
+}
+
+/* ==========================
+   BASE
+========================== */
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* ==========================
+   LAYOUT GENERAL
+========================== */
+.site-wrapper {
+  max-width: var(--max-width);
+  margin: auto;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+}
+
+/* ==========================
+   NAV
+========================== */
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #666;
+  font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--accent);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+.content-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* ==========================
+   MAIN
+========================== */
+.main-content {
+  flex: 3;
+}
+
+/* HERO */
+.hero {
+  background: var(--soft);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  margin-top: 1.5rem;
+}
+
+/* ==========================
+   ARTÍCULOS
+========================== */
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 1.2rem;
+}
+
+.card a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ==========================
+   ASIDE
+========================== */
+.sidebar {
+  flex: 1;
+  background: var(--soft);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  height: fit-content;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.main-footer {
+  background: var(--soft);
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .main-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
